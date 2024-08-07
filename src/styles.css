@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/*NAVBAR*/
+header {
+  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 10;
+  width: 90%;
+  padding: 1rem, 9%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*z-index: 100;*/
+}
+.logo {
+  font-size: 2rem;
+  color: purple;
+  margin-left: 2rem;
+  font-weight: 800;
+  transition: 0.5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.hamburger,
+.fa-bars {
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: white;
+  display: none;
+}
+
+nav a {
+  font-size: 1.5rem;
+  color: white;
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: purple;
+}
+
+@media (max-width: 995px) {
+  .hamburger,
+  .fa-bars {
+    display: block;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    width: 30%;
+    border-left: 3px solid purple;
+    border-bottom-left-radius: 2rem;
+    border-radius: 2rem;
+    padding: 1rem solid;
+    background-color: #161616;
+  }
+
+  nav.open {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  nav a:hover,
+  nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid purple;
+  }
+}
+
+/*Body of homepage*/
+
+section {
+  min-height: 100vh;
+  padding: 5rem 9% 5 rem;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 8rem;
+  background-color: black;
+}
+
+img {
+  width: 100%;
+}
+
+.home-content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+span {
+  color: purple;
+}
+
+.home-content h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.home-content p {
+  font-size: 1.5rem;
+}
+
+.home-image img {
+  border-radius: 50%;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 0.2rem solid purple;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+
+  transition: 0.3s ease;
+  color: purple;
+}
+
+.social-icons a:hover {
+  color: white;
+  transform: scale(1.3) translateY(-5px);
+  background-color: purple;
+  box-shadow: 0 0 25px purple;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: black;
+  border-radius: 4rem;
+  font-size: 1.6rem;
+  color: purple;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+  border: 2px solid;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.btn :hover {
+  transform: scale3d(1.03);
+  background-color: purple;
+  color: black;
+
+  box-shadow: 0 0 25px purple;
+}
+
+@media (max-width: 1000px) {
+  .home {
+    gap: 4rem;
+  }
+
+  @media (max-width: 995px) {
+    .home {
+      flex-direction: column;
+      margin: 5rem 4rem;
+    }
+
+    .home-content {
+      font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+      font-size: 5rem;
+    }
+
+    .img {
+      width: 70vw;
+      margin-top: 4rem;
+    }
+  }
+}
+
+.intro {
+  height: 400vh;
+  width: 100%;
+  display: flex;
+}
+.intro-title {
+  width: 150%;
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.typer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  font-size: 30px;
+  color: white;
+}
+.typer h2 {
+  margin-left: 10px;
+  color: coral;
+}
+
+/*skills row*/
+.slider {
+  position: relative;
+  width: 30%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.card {
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  text-align: justify;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.5s;
+  left: calc(50% - 110px);
+  top: 0;
+}
+
+#next,
+#prev {
+  position: absolute;
+  top: 250%;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+#next {
+  left: unset;
+  right: 50px;
+}
+
+#prev {
+  right: 500px;
+}
