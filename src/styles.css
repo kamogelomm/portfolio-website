@@ -251,6 +251,7 @@ section .about,
 .about-left h2 {
   margin-left: 2rem;
   line-height: 1.2;
+  justify-content: center;
 }
 
 .education .right-side h4 {
@@ -275,6 +276,22 @@ section .about,
 .cv a {
   color: purple;
   text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+  .about-left .left-side p {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .education .right-side p {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
 }
 /*Projects*/
 
@@ -417,6 +434,17 @@ input:checked + label .description {
   background-image: url("/pictures/pexels-danbuilds-633409.jpg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 100%;
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 /*CONTACT*/
 
