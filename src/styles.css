@@ -236,6 +236,7 @@ section .about,
 
 .title {
   font-size: 25px;
+  margin-left: 15px;
   text-transform: capitalize;
   margin-bottom: 0.5rem;
   line-height: 1.2;
@@ -269,7 +270,7 @@ section .about,
 }
 
 .education .right-side ul {
-  font-size: 2rem;
+  font-size: 3rem;
   list-style: none;
   margin: 15px 20px;
 }
@@ -278,21 +279,6 @@ section .about,
   text-decoration: none;
 }
 
-@media (max-width: 1000px) {
-  .about-left .left-side p {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-  }
-
-  .education .right-side p {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-  }
-}
 /*Projects*/
 
 .projectTitle h2 {
@@ -335,6 +321,7 @@ section .about,
   align-items: flex-end;
   transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
   box-shadow: 0px 10px 30px;
+  padding-bottom: 2rem;
 }
 
 .card > .row {
@@ -360,7 +347,7 @@ section .about,
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  height: 110px;
+  height: 200px;
   width: 520px;
   opacity: 0;
   transform: translateY(30px);
@@ -371,17 +358,21 @@ section .about,
 .description p {
   color: white;
   padding-top: 5px;
+  margin-bottom: 10px;
+  font-size: 2rem;
 }
 
 .description h4 {
   text-transform: uppercase;
   text-align: center;
-  color: white;
+  font-size: 2rem;
+  color: purple;
 }
 
 .description .link {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
   border: 1px solid black;
   padding: 12px 27px;
   color: white;
@@ -436,22 +427,14 @@ input:checked + label .description {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 1000px) {
-  .wrapper {
-    width: 100%;
-  }
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+hr {
+  border-bottom: 3px solid white;
+  max-width: 80%;
+  margin: 0;
+  text-align: center;
 }
-/*CONTACT*/
 
-.footer {
-  margin-left: 3rem;
-  line-height: 1.3;
-}
+/*CONTACT*/
 
 .footer h2 {
   color: purple;
@@ -460,4 +443,16 @@ input:checked + label .description {
 footer {
   text-align: center;
   font-size: 2rem;
+}
+
+img {
+  animation: float 4s ease infinite;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
